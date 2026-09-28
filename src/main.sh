@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function() {
+commit_watch() {
     local destination
     destination="unnamed"
 
