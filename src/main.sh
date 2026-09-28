@@ -14,5 +14,6 @@ commit_watch() {
         printf '%s: %s\n' "$(date '+(%Y-%m-%d) %H:%M')" "$*" >> "$destination"
         echo "Commit added."
         return 0
+        ;;
     esac
 }
