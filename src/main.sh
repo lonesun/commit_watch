@@ -26,5 +26,9 @@ commit_watch() {
             fi
         return 0
         ;;
+
+        *)
+            echo "Unknown command: ${1:-}" >&2
+            echo "Usage: commit_watch {new|report}" >&2
     esac
 }
