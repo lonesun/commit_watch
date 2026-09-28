@@ -11,10 +11,10 @@ commit_watch() {
                 echo "usage: commit_watch new {message}" >&2
                 return 1
             fi
-        printf '%s: %s\n' "$(date '+(%Y-%m-%d) %H:%M')" "$*" >> "$destination"
-        echo "Commit added."
-        return 0
-        ;;
+            printf '%s: %s\n' "$(date '+(%Y-%m-%d) %H:%M')" "$*" >> "$destination"
+            echo "Commit added."
+            return 0
+            ;;
 
         report)
             if [ ! -f "$destination" ]; then
@@ -24,8 +24,8 @@ commit_watch() {
                 cat "$destination"
                 printf '%s: %s\n' "$(date '+(%Y-%m-%d) %H:%M')" "A file report was accessed at this time." >> "$destination"
             fi
-        return 0
-        ;;
+            return 0
+            ;;
 
         *)
             echo "Unknown command: ${1:-}" >&2
