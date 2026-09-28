@@ -6,6 +6,7 @@ commit_watch() {
 
     case "${1:-}" in
         new)
+            shift
             if [ "$#" -eq 0 ]; then
                 echo "usage: function new {message}" >&2
                 return 1
