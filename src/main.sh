@@ -11,6 +11,6 @@ commit_watch() {
                 echo "usage: function new {message}" >&2
                 return 1
             fi
-        printf "$*"
+        printf '%s: %s\n' "$(date '+(%Y-%m-%d) %H:%M')" "$*"
     esac
 }
